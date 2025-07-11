@@ -1,8 +1,8 @@
-# Terminal Tetris 2 README
+# Terminal Tetris
 
 ## Project Overview
 
-**Terminal Tetris 2** is a terminal-based implementation of the classic Tetris game, developed as an educational exercise to master the Go programming language, under the mentorship of **Lignigno**. This final iteration (approximately the 3th or 5th) leverages Go's concurrency, modularity, and type safety to deliver a robust and engaging game, using the `termbox-go` library for rendering and input handling. The project adheres to best practices to ensure maintainability, performance, and a nostalgic user experience. Below, we detail the good practices employed and pay homage to the original Tetris, created on the Electronica 60.
+**Terminal Tetris** is a terminal-based implementation of the classic Tetris game, developed as an educational exercise to master the Go programming language, under the mentorship of **Lignigno**. This final iteration (approximately the 3th or 5th) leverages Go's concurrency, modularity, and type safety to deliver a robust and engaging game, using the `termbox-go` library for rendering and input handling. The project adheres to best practices to ensure maintainability, performance, and a nostalgic user experience. Below, we detail the good practices employed and pay homage to the original Tetris, created on the Electronica 60.
 
 ### Good Practices in the Project
 
@@ -42,7 +42,7 @@
 
 ### Homage to the Original Tetris
 
-The original **Tetris**, created by **Alexey Pajitnov** in 1984 on the **Electronica 60**, a Soviet computer with limited resources, set a standard for elegant game design. **Terminal Tetris 2**, guided by **Lignigno**, pays tribute by recreating its core mechanics—falling tetrominoes, line clearing, and score tracking—in a terminal environment using `termbox-go`, capturing the minimalist, retro aesthetic of the original.
+The original **Tetris**, created by **Alexey Pajitnov** in 1984 on the **Electronica 60**, a Soviet computer with limited resources, set a standard for elegant game design. **Terminal Tetris**, guided by **Lignigno**, pays tribute by recreating its core mechanics—falling tetrominoes, line clearing, and score tracking—in a terminal environment using `termbox-go`, capturing the minimalist, retro aesthetic of the original.
 
 The Electronica 60 version excelled despite hardware constraints, with simple controls and addictive gameplay. This project reflects that spirit through ASCII-based visuals (`[]` for bricks, `.` for empty spaces in `createimgfield.go`), intuitive controls (`mechs/applyaction.go`), and visual feedback like blinking lines (`mechs/linefuncs.go`). Modern enhancements—concurrent input, encrypted scores, and customizable themes—build on Pajitnov’s vision, showcasing Go’s capabilities while preserving the classic charm.
 
@@ -64,8 +64,8 @@ The Electronica 60 version excelled despite hardware constraints, with simple co
 1. **Install Go**: Ensure Go (version 1.16 or later) is installed. Follow instructions at [golang.org](https://golang.org/doc/install).
 2. **Clone Repository**:
    ```bash
-   git clone https://github.com/your-username/terminal-tetris2.git
-   cd terminal-tetris2
+   git clone https://github.com/kyzyrd/terminal-tetris.git
+   cd terminal-tetris
    ```
 3. **Install Dependencies**:
    ```bash
@@ -73,12 +73,12 @@ The Electronica 60 version excelled despite hardware constraints, with simple co
    ```
 4. **Build Game**:
    ```bash
-   go build -o terminal-tetris2
+   go build -o terminal-tetris
    ```
 5. **Run Game**:
    Optionally specify an encryption key:
    ```bash
-   ./terminal-tetris2 your_encryption_key
+   ./terminal-tetris "-"
    ```
 
 ## Usage

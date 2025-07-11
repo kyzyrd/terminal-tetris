@@ -11,17 +11,13 @@ import (
 func CreateImgNS(nextShape shape.Shape) Img {
 	bricks := nextShape.GetBricks()
 
-	// Найти границы фигуры
 	minX, minY, maxX, maxY := getBounds(bricks)
 
-	// Вычислить размеры изображения
 	width := (maxX - minX + 1) * 2
 	height := maxY - minY + 1
 
-	// Создать пустое изображение
 	image := createEmptyImage(width, height)
 
-	// Разместить кирпичи на изображении
 	placeBricks(image, bricks, minX, minY)
 
 	return image

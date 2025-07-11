@@ -78,7 +78,7 @@ The Electronica 60 version excelled despite hardware constraints, with simple co
 5. **Run Game**:
    Optionally specify an encryption key:
    ```bash
-   ./terminal-tetris "-"
+   .go run . "-"
    ```
 
 ## Usage
@@ -86,7 +86,7 @@ The Electronica 60 version excelled despite hardware constraints, with simple co
 - Launch the game and select a level (0-9) in the menu.
 - Control falling shapes (see [Controls](#controls)).
 - Clear lines by filling rows; cleared lines blink before removal, and remaining bricks drop.
-- Earn points for cleared lines, with bonuses for level (3 points) and no next-shape preview (5 points).
+- Earn points for dropping figures, with bonuses for level (3 points) and no next-shape preview (5 points).
 - Game ends when a new shape cannot spawn.
 - Enter a username (up to 8 characters) to save your score.
 - View the leaderboard (top 15 scores) and choose to replay (Y/Д) or exit (N/Н).
@@ -99,9 +99,9 @@ The Electronica 60 version excelled despite hardware constraints, with simple co
 - **Up Arrow**: Rotate shape clockwise.
 - **Space**: Drop shape instantly.
 - **Down Arrow**: Accelerate shape fall.
-- **N**: Toggle next-shape preview.
-- **H**: Toggle control hints.
-- **U**: Increase level (max 9).
+- **n**: Toggle next-shape preview.
+- **h**: Toggle control hints.
+- **u**: Increase level (max 9).
 - **Esc**: Quit game.
 - **Menu/Endgame Input**:
   - **0-9**: Select level or enter name characters.

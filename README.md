@@ -78,7 +78,7 @@ The Electronica 60 version excelled despite hardware constraints, with simple co
 5. **Run Game**:
    Optionally specify an encryption key:
    ```bash
-   .go run . "-"
+   go run . "-"
    ```
 
 ## Usage

@@ -95,4 +95,4 @@ Each score entry contains:
 
 ## Inspiration
 
-This project is a tribute to the original 1984 **[Tetris](https://www.youtube.com/watch?v=O0gAgQQHFcQ&t=139s)** by **[Alexey Pajitnov](https://en.m.wikipedia.org/wiki/Alexey_Pajitnov)** on the **[Electronica 60](https://en.m.wikipedia.org/wiki/Elektronika_60)**. Despite its limitations, that version set the standard for minimalist, addictive gameplay. This terminal version reflects that same design philosophy.
+This project is a tribute to the original 1984 **[Tetris](https://www.youtube.com/watch?v=O0gAgQQHFcQ&t=3s)** by **[Alexey Pajitnov](https://en.m.wikipedia.org/wiki/Alexey_Pajitnov)** on the **[Electronica 60](https://en.m.wikipedia.org/wiki/Elektronika_60)**. Despite its limitations, that version set the standard for minimalist, addictive gameplay. This terminal version reflects that same design philosophy.

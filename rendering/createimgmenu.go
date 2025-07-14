@@ -4,9 +4,8 @@ package rendering
 
 // CreateImgLogo создает изображение для счета и уровня
 func CreateImgLogo() Img {
-	gameLogo := make(Img, 0, 3) // создаем срез для хранения строк счета
+	gameLogo := make(Img, 0, 3)
 
-	// заполняем срез значениями
 	gameLogo = append(gameLogo, "[]    ")
 	gameLogo = append(gameLogo, "ТЕТРИС")
 	gameLogo = append(gameLogo, "    []")

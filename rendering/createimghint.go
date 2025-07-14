@@ -6,7 +6,6 @@ package rendering
 func CreateImgHint() Img {
 	hintImg := make(Img, 0, 6)
 
-	// заполняем срез значениями
 	hintImg = append(hintImg, "<: НАЛЕВО >: НАПРАВО")
 	hintImg = append(hintImg, "    ^: ПОВОРОТ")
 	hintImg = append(hintImg, "\\/: УСКОРИТЬ")

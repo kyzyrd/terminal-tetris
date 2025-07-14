@@ -11,7 +11,7 @@ import (
 
 // ----------------------------------------------------------------------------------------------------|
 
-func Game(control *utils.Controls, canvas *rendering.Canvas, level int) (string, int, int) {
+func Game(control *utils.Controls, canvas *rendering.Canvas, level int) *utils.ScoreEntry {
 	gameVar := utils.Initialize(level)
 
 	for !gameVar.Quit {
@@ -63,7 +63,11 @@ func Game(control *utils.Controls, canvas *rendering.Canvas, level int) (string,
 
 	renderWindow(gameVar, canvas)
 
-	return getUserName(control, canvas), gameVar.Stat.Level, gameVar.Stat.Score
+	return utils.CreateNewEntry(
+		getUserName(control, canvas),
+		gameVar.Stat.Level,
+		gameVar.Stat.Score,
+	)
 }
 
 // ----------------------------------------------------------------------------------------------------|

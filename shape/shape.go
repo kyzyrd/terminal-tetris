@@ -42,8 +42,7 @@ type Vec2 struct {
 	Y int
 }
 
-// структура _Orientation хранит ориентацию фигуры,
-// массив кирпичиков и указатели на предыдущую и следующую ориентацию
+// структура _Orientation хранит ориентацию фигуры
 type _Orientation struct {
 	Bricks []Brick
 	Next   *_Orientation
@@ -62,8 +61,6 @@ type Shape struct {
 
 // тип RotDir используется для обозначения направления вращения фигуры
 type RotDir = bool
-
-//---------------------------------------------------------------------------------------//
 
 // глобальный массив для хранения ориентаций фигур
 var _shapesOrientation [7]*_Orientation = [7]*_Orientation{}
@@ -110,14 +107,12 @@ func (S *Shape) GetBricks() []Brick {
 
 //---------------------------------------------------------------------------------------//
 
-// метод GetPosition
 func (S *Shape) GetPosition() Vec2 {
 	return S._pos
 }
 
 //---------------------------------------------------------------------------------------//
 
-// метод Move
 func (S *Shape) Move(dx, dy int) Vec2 {
 	S._pos.X += dx
 	S._pos.Y += dy

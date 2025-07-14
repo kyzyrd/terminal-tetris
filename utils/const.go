@@ -9,7 +9,9 @@ import (
 //------------------------------------------------------------------------------------// CONST
 
 const (
-	TYPE_INT = byte(iota)
+	TYPE_NIL = byte(iota)
+	TYPE_SCORE
+	TYPE_LEVEL
 	TYPE_STRING
 )
 

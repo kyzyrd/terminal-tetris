@@ -65,12 +65,12 @@ func createTmpField(oldBricks, shapeBricks []shape.Brick) [][]shape.Brick {
 
 // createRowString создает строку для отображения игрового поля
 func createRowString(field [][]shape.Brick, row int) string {
-	result := "" // строка для отображения
+	result := ""
 	for _, cell := range field[row] {
 		if cell.Visible == shape.SHOW {
-			result += "[]" // если ячейка заполнена, добавляем кирпичик
+			result += "[]"
 		} else {
-			result += " ." // если ячейка не заполнена, добавляем пробел и точку
+			result += " ."
 		}
 	}
 	return result

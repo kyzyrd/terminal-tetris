@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"io"
 	"log"
 	"os"
@@ -24,15 +25,21 @@ func main() {
 	termbox.Init()
 	defer termbox.Close()
 
+	allEntries, err := readScores()
+	if err != nil {
+		termbox.Close()
+		log.Fatal(err)
+		os.Exit(1)
+	}
+
+	canvas := rendering.GetNewCanvas(utils.WINDOW_WIDTH, utils.WINDOW_HEIGHT, rendering.DEFAULT)
+
 	go CatchEvent(
 		&control.NewEvent,
 		&control.Ev,
 		&control.MutexEvent,
 	)
 
-	canvas := rendering.GetNewCanvas(utils.WINDOW_WIDTH, utils.WINDOW_HEIGHT, rendering.DEFAULT)
-
-	allEntries := readScores()
 	for !quit {
 		level = gameparts.Menu(&control, canvas)
 		newScoreEntry = gameparts.Game(&control, canvas, level)
@@ -57,10 +64,10 @@ func CatchEvent(eventExist *bool, ev *termbox.Event, mutexEvent *sync.Mutex) {
 
 // ----------------------------------------------------------------------------------------------------|
 
-func readScores() []*utils.ScoreEntry {
+func readScores() ([]*utils.ScoreEntry, error) {
 	data, err := readFile(utils.SCOREBOARD_FILE)
 	if err != nil || data == nil || len(data) == 0 {
-		return make([]*utils.ScoreEntry, 0)
+		return make([]*utils.ScoreEntry, 0), nil
 	}
 
 	encryption.Unhashing(data)
@@ -68,11 +75,10 @@ func readScores() []*utils.ScoreEntry {
 	var allEntries []*utils.ScoreEntry
 	corrupted := false
 	if allEntries, corrupted = encryption.ConvertBytes2Entries(data); corrupted {
-		log.Fatal("scoreboard is corrupted")
-		return make([]*utils.ScoreEntry, 0)
+		return make([]*utils.ScoreEntry, 0), errors.New("scoreboard is corrupted")
 	}
 
-	return allEntries
+	return allEntries, nil
 }
 
 // ----------------------------------------------------------------------------------------------------|

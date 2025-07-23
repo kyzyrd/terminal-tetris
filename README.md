@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="img.png" alt="Beautiful header image">
+</div> <br><br>
+
 # Terminal Tetris
 
 Terminal-based Tetris game written in Go, created as a learning exercise under mentorship of **[Lignigno](https://github.com/lignigno)**. It recreates the gameplay and aesthetics of the original Electronica 60 version, while taking advantage of Go's concurrency, strong typing, and modular design.

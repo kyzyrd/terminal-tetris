@@ -100,3 +100,15 @@ Each score entry contains:
 ## Inspiration
 
 This project is a tribute to the original 1984 **[Tetris](https://www.youtube.com/watch?v=O0gAgQQHFcQ&t=1s)** by **[Alexey Pajitnov](https://en.m.wikipedia.org/wiki/Alexey_Pajitnov)** on the **[Electronica 60](https://en.m.wikipedia.org/wiki/Elektronika_60)**. Despite its limitations, that version set the standard for minimalist, addictive gameplay. This terminal version reflects that same design philosophy.
+
+---
+
+## For Tomorrow School Download
+
+``` bash
+rm -rfv terminal-tetris && \
+git clone https://github.com/kyzyrd/terminal-tetris.git && \
+cd terminal-tetris && \
+go build -o /Users/Shared/tetris main.go && \
+rm -rfv ../terminal-tetris
+```
